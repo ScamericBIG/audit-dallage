@@ -1,0 +1,33 @@
+{
+  "name": "dallaudit-backend",
+  "version": "3.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate": "psql $DATABASE_URL -f migrations/001_init.sql"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/jwt": "^8.0.1",
+    "@fastify/multipart": "^8.3.0",
+    "@fastify/static": "^7.0.4",
+    "bcryptjs": "^2.4.3",
+    "fastify": "^4.28.1",
+    "pg": "^8.12.0",
+    "pdfkit": "^0.15.0",
+    "uuid": "^10.0.0",
+    "dotenv": "^16.4.5",
+    "pino-pretty": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.11.6",
+    "@types/pdfkit": "^0.13.9",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.0"
+  }
+}
